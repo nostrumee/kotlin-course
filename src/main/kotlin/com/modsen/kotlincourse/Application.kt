@@ -90,8 +90,7 @@ fun main() {
         toWallet = wallet3,
         exchange = binance
     )
-    personalAccountService.printWalletsBalances(wallet1)
-    personalAccountService.printWalletsBalances(wallet3)
+    personalAccountService.printWalletsBalances(wallet1, wallet3)
     personalAccountService.printTransactionHistoryByExchangeAndTimePeriod(user1, binance, startDate, endDate)
 
 }

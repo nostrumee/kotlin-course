@@ -34,7 +34,7 @@ class TradingServiceImpl : TradingService {
         checkPassphrase(wallet, passphrase)
         checkWalletSufficientFunds(wallet, fromCurrency, fromAmount)
         checkIfCurrencyPairSupported(exchange, fromCurrency, toCurrency)
-        //checkIfTransactionFails()
+        checkIfTransactionFails()
 
         val exchangeRate = exchange.exchangeRates[Pair(fromCurrency, toCurrency)]
         val toAmount = exchangeRate!!.multiply(fromAmount)
