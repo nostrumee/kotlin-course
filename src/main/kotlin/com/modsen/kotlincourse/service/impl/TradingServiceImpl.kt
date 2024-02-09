@@ -116,7 +116,7 @@ class TradingServiceImpl : TradingService {
     private fun checkUserStatus(user: User) {
         if (user.status == UserStatus.BLOCKED || user.status == UserStatus.NEW)
             throw UserStatusNotSupportedException(
-                USER_STATUS_NOT_SUPPORTED_EXCEPTION.format(user.status.name)
+                USER_STATUS_NOT_SUPPORTED_MESSAGE.format(user.status.name)
             )
     }
 
